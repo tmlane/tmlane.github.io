@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--This is Adrian Kimbrell's And Trevor Lane's project-->
+<html>
+<head>
+  	 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  	 <title>IsItOpen</title>
+
+   	 <script src="http://maps.google.com/maps/api/js?sensor=false"
+   	 type="text/javascript"></script>
+   	 <link rel="stylesheet" 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+ 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+	<style type="text/css">
+		body { background: url("http://umad.com/img/2015/8/teal-gradient-wallpaper-402-470-hd-wallpapers.jpg") !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<body>
+	<!-- This is the navbar -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<h1>Eckerd College</h1>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container ">
+
+  <!--This sets up table view-->
+  <div class="well" >
+	  <h2 class="text-center"><b>Is It Open? </b></h2>
+   <table class="table table-striped table-center">
+    <thead>
+      <tr>
+        <th>Location</th>
+        <th>Open/Closed</th>
+        <th>Hours</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pub</td>
+        <td class="Pub">Loading</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Cafe</td>
+        <td class="Cafe">Loading</td>
+        <td>7:15am-9:45am  | 11:30am-1:30pm | 5:00pm-7:00pm</td>
+      </tr>
+      <tr>
+        <td>CEC</td>
+        <td class="CEC">Loading</td>
+        <td>7:30am-8:30am | 12:00pm-1:30pm  | 6:00pm-7:00pm</td>
+      </tr>
+      <tr>
+        <td>Mailroom</td>
+        <td class="Mailroom">Loading</td>
+        <td>9:00am-4:00pm</td>
+      </tr>
+      <tr>
+        <td>Starbucks</td>
+        <td class="Starbucks">Loading</td>
+        <td>7:00am-9:00pm M-TR </td>
+      </tr>
+     <!-- <tr>
+        <td>PizzaTruck</td>
+        <td>Hour</td>
+        <td class="PizzaTruck">Loading</td>
+      </tr>
+      -->
+      <tr>
+        <td>Pool</td>
+        <td class="Pool">Loading</td>
+        <td>12:00pm-6:00pm (Weather Permitting)</td>
+      </tr>
+      <tr>
+        <td>Waterfront</td>
+        <td class="Waterfront">Loading</td>
+        <td>9:00am-6:00pm</td>
+      </tr>
+      <!--
+       <tr>
+        <td>Library</td>
+        <td>Hour</td>
+        <td class="Library">Loading</td>
+      </tr> -->
+    </tbody>
+  </table>
+	</div>
+
+</div>
+
+
+
+
+    <!--This sets up the maps view-->
+ 	<div class="container">
+		<div >
+		  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1wjxOY-Ual0sIRH7jcgaTmt-CMqA" width="100%" height="500px"></iframe>
+		</div>
+
+
+<!---This is the lower part of the site---->
+	</div>
+	<script>
+	$(document).ready(function(){
+
+		//Establish Day of Week
+		var date = new Date();
+		var day = date.getDate()
+		var minutes = (date.getMinutes() / 100);
+		var hours = date.getHours() ;
+		var time = hours + minutes;
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//This is weekend hours for the Pub
+	if(day == 0 || day == 6){
+		if (time >= 7.30 &&  time < 9.30 || time >= 11.30 && time < 13.30 || time >= 17 && time < 19)
+        {
+   		$(".Pub").text("Open").css("color","green");
+        }
+
+		else{
+			$(".Pub").text("Closed").css("color","red");
+
+        }
+                     }
+//This is weekday hours for the Pub
+	else{
+		if (time >= 9.00 &&  time < 10.30 || time >= 11.00 && time < 14 || time >= 14 && time < 23) {
+
+			$(".Pub").text("Open").css("color","green");
+
+
+		}
+		else{
+			$(".Pub").text("Closed").css("color","red");
+			}
+		}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//This is weekend hours for the Cafe
+	if(day == 0 || 6){
+		if (time >= 7.30 &&  time < 9.30 || time >= 11.30 && time < 13.30 || time >= 17 && time < 19) {
+
+			$(".Cafe").text("Open").css("color","green");
+
+			}
+		else{
+			$(".Cafe").text("Closed").css("color","red");
+		}
+}
+//This is weekday hours for the Cafe
+	else{
+		if (time >= 7.30 &&  time < 9.30 || time >= 11.30 && time < 13.30 || time >= 17 && time < 19) {
+
+			$(".Cafe").text("Open").css("color","green");
+
+
+		}
+		else{
+			$(".Cafe").text("Closed").css("color","red");
+			}
+		}
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//This is weekend hours for the CEC
+	if(day == 0 || day == 6){
+		if (time >= 10 &&  time < 13) {
+
+			$(".CEC").text("Open").css("color","green");
+
+			}
+		else{
+			$(".CEC").text("Closed").css("color","red");
+		}
+}
+//This is weekday hours for the CEC
+	else{
+		if (time >= 7.30 &&  time < 8.30 || time >= 12 && time < 13.30 || time >= 18 && time < 19) {
+
+			$(".CEC").text("Open").css("color","green");
+
+
+		}
+		else{
+			$(".CEC").text("Closed").css("color","red");
+			}
+		}
+/////
+
+
+//Weekend hours for Mailroom
+	if(day == 0 || day == 6){
+			$(".Mailroom").text("Closed").css("color","red");
+		}
+
+//This is weekday hours for the Mailroom
+	else{
+		if (time >= 9 &&  time < 17) {
+
+			$(".Mailroom").text("Open").css("color","green");
+		}
+		else{
+			$(".Mailroom").text("Closed").css("color","red");
+			}
+		}
+
+
+//// Starbucks hours FOR WINTER TERM
+		if(day == 0 || day == 6){
+			$(".Starbucks").text("Closed").css("color","red");
+		}
+
+//This is weekday hours for  Starbucks W TERM
+	else{
+		if (time >= 8.30 &&  time < 21) {
+
+			$(".Starbucks").text("Open").css("color","green");
+		}
+		else{
+			$(".Starbucks").text("Closed").css("color","red");
+			}
+		}
+//End of Starbucks hours
+
+/*Pizza truck hours
+		if(day == 5){
+			if(time >= 21 &&  time < 24) {
+			$(".PizzaTruck").text("Open").css("color","green");
+			}
+		else{
+			$(".PizzaTruck").text("Closed").css("color","red");
+			}
+		}
+		 if(day == 6){
+				if(time >= 0 && time < 2 || time >= 21 && time < 24){
+					$(".PizzaTruck").text("Open").css("color","green");
+			}
+		else{
+			$(".PizzaTruck").text("Closed").css("color","red");
+			}
+		}
+		 if(day == 0){
+				if(time >= 0 && time < 2){
+					$(".PizzaTruck").text("Open").css("color","green");
+					}
+		else{
+			$(".Pizzatruck").text("Closed").css("color","red");
+		}
+		}
+
+/// End of Pizza Truck hours */
+
+		//Pool hours
+		if(time >= 12 && time < 18){
+			$(".Pool").text("Open").css("color","green");
+		}
+		else{
+			$(".Pool").text("Closed").css("color","red");
+		}
+		//End of Pool hours
+
+	//Waterfront hours
+		if(time >= 12 && time < 17){
+			$(".Waterfront").text("Open").css("color","green");
+		}
+		else{
+			$(".Waterfront").text("Closed").css("color","red");
+		}
+	//End of waterfront hours
+
+/*
+	//Library Hours
+    if(day == 5){
+		if (time >= 8 &&  time < 22)
+        {
+   		$(".Library").text("Open").css("color","green");
+        }
+
+		else{
+			$(".Library").text("Closed").css("color","red");
+
+        }
+                     }
+    //This is weekday hours for the Library
+
+		else{
+		if(day == 6) {
+			if(time >=10 && time < 22){
+			$(".Library").text("Open").css("color","green");
+			}
+		}
+		else{
+			$(".Library").text("Closed").css("color","red");
+			}
+		}
+
+	}
+*/
+
+
+
+
+	});
+	</script>
+	<div><p></p></div>
+</body>
+</html>
