@@ -1,56 +1,157 @@
 <!DOCTYPE html>
-<!--Trevor Lane's project-->
-<html>
+<html lang="en">
 <head>
-  	 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  	 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  	 <title>Trevor Lane</title>
-
-   	 <script src="http://maps.google.com/maps/api/js?sensor=false"
-   	 type="text/javascript"></script>
-   	 <link rel="stylesheet" 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
- 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Home</title>
+  <link href="css/index.css" rel="stylesheet">
+  <link href="lib/fontello/css/fontello.css" rel="stylesheet">
 </head>
-	<style type="text/css">
-		body { background: url("https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif") !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
-	</style>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
 <body>
-	<!-- This is the navbar -->
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<h1>Trevor Lane</h1>
-			</div>
-		</div>
-	</nav>
+<header class="header-container">
 
-	<div class="container ">
+</header>
+  <main>
+<div class="container">
+  <div class="lead">
+    <img src="img/trevhead.png" alt="Trevors Hair" style="width:100px;height:100px;">
+    <h1 class="lead__heading">Hi, I'm Trevor</h1>
+    <div class="lead__sub">
+      I'm a Junior at Eckerd college pursuing a Bachelors in Computer Science.
+    </div>
 
-  <!--This sets up table view-->
-  <div class="well" >
-	  <h2 class="text-center"><b>My Projects </b></h2>
-   <h3>
-       <a href="tmlane.github.io/isitOpen.html">isItOpen?</a>
-   </h3>
-   
-	</div>
+    <div class="call-to-action">
+      <a href="https://www.forbes.com/30-under-30-2017/dorm-room-founders/#5f49a24819bd" target="_blank" class="btn btn--primary btn--lg">What inspires me</a>
 
+      <div class="socials">
+
+                              <a
+            class="socials__link"
+            href="https://github.com/tmlane"
+            target="_blank"
+          >
+              <i class="icon-github-circled"></i>
+            </a>
+
+                                                    <a
+            class="socials__link"
+            href="mailto:tltrevorlane@gmail.com"
+            target="_blank"
+          >
+              <i class="icon-mail-alt"></i>
+            </a>
+                              <a
+            class="socials__link"
+            href="https://www.linkedin.com/in/trevorlane1/"
+            target="_blank"
+          >
+              <i class="icon-linkedin-squared"></i>
+            </a>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="container experience-container">
+  <h1>Experience</h1>
+  <div class="timeline">
+    <div class="timeline__line"></div>
+      <div class="timeline__item">
+        <div class="experience">
+          <header class="experience__header">July 2017 - Present</header>
+          <h2 class="experience__name">
+            Executive Intern - Chowly Inc.
+          </h2>
+          <div class="skill-tags">
+          </div>
+          <p>Work on various projects that maximize efficiency of operations, sales, and management teams. </p>
+          <ul>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="experience">
+          <header class="experience__header">August 20</header>
+          <h2 class="experience__name">
+            Director of Palmetto Productions
+          </h2>
+          <div class="skill-tags">
+          </div>
+          <p>Director of Student Activities board at Eckerd College.  </p>
+          <ul>
+              <li>Oversee board of Directors with $108,000 budget allotment</li>
+              <li>Introduced multiple new events to campus</li>
+              <li>As Director of Concerts, booked: Tpain, Cherub, Raury, Coast Modern.</li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>
+    <div class="container project-container">
+  <h1>My Projects</h1>
+    <div class="project">
+      <div class="project__img-container">
+                <img class="project__img" src="img/isitopen.png" alt="isitopen">
+      </div>
+      <div class="project__details">
+        <h2 class="project__name">
+          IsItOpen?
+        </h2>
+        <div class="skill-tags">
+            <div class="skill-tag">HTML</div>
+            <div class="skill-tag">Javascript</div>
+            <div class="skill-tag">Bootstrap</div>
+        </div>
+        <p>
+          Quick sloppy one-page that tells you what is open on campus.
+          <div>
+            <a class="btn" href="http://www.tlane.me/isitOpen.html" target="_blank">View Project</a>
+          </div>
+        </p>
+      </div>
+    </div>
 </div>
 
+<div class="container project-container">
+<h1>Short Film of the Week</h1>
+<div class="project">
+  <div class="project__img-container">
+            <img class="project__img" src="img/casino.png" alt="casino">
+  </div>
+  <div class="project__details">
+    <h2 class="project__name">
+      "Casino"
+    </h2>
 
+    <p>
 
+      <div>
+        <a class="btn" href="https://vimeo.com/242057601" target="_blank">View Video</a>
+      </div>
+    </p>
+  </div>
+</div>
+</div>
 
-
-
-<!---This is the lower part of the site---->
-	</div>
-
-	<div><p></p></div>
+    <div class="container">
+  <h2>Testimonials</h2>
+    <blockquote class="testimonial">
+      <p>“This guy is the real deal. I'm thinking he should just take over whatever I'm currently workin on”</p>
+      <cite title="Elon Musk">
+        Elon Musk
+          (Master of the Universe)
+      </cite>
+    </blockquote>
+  <div class='contact'>
+    <h2>Contact</h2>
+    <p class='contact__msg'>I'm currently available for freelance projects or full-time work. If you're interested in working with me, please get in touch through <a href='mailto:tltrevorlane@gmail.com'>tltrevorlane@gmail.com</a>.
+  </div>
+</div>
+  </main>
+<footer class='footer'>
+  <h1 class='footer__name'>Trevor Lane</h1>
+  <h2 class='footer__title'>Student</h2>
+  Copyright © Trevor Lane
+</footer>
+  <script src="js/index.js"></script>
 </body>
 </html>
-
-
