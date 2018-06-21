@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Getting Started with ml5.js</title>
+      <script src="https://unpkg.com/ml5"></script>
+    </head>
+
+    <body>
+      <script>
+
+        // Your code will go here
+
+      </script>
+    </body>
+  </html>
